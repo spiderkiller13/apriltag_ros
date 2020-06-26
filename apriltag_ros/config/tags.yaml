@@ -19,6 +19,8 @@
 #   ]
 standalone_tags:
   [
+      {id: 46, size: 0.165, name: "s_front"},
+      {id: 51, size: 0.06 , name: "s_right_foot"}
   ]
 # ## Tag bundle definitions
 # ### Remarks
