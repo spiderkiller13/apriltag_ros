@@ -8,7 +8,11 @@
   <!-- Set parameters -->
   <rosparam command="load" file="$(find apriltag_ros)/config/settings.yaml" ns="$(arg node_namespace)" />
   <rosparam command="load" file="$(find apriltag_ros)/config/tags.yaml" ns="$(arg node_namespace)" />
-  <rosparam param="$(arg node_namespace)/standalone_tags" subst_value="True">[{id: 46, size: 0.165, name: "$(arg robot_name)/s_front"}]</rosparam>
+  <rosparam param="$(arg node_namespace)/standalone_tags" subst_value="True">[{id: 46, size: 0.15, name: "$(arg robot_name)/shelf_one"},
+                                                                              {id: 51, size: 0.15, name: "$(arg robot_name)/shelf_two"},
+                                                                              {id: 80, size: 0.15, name: "$(arg robot_name)/home"},
+                                                                              {id: 215, size: 0.15, name: "$(arg robot_name)/A_site"},
+                                                                              {id: 241, size: 0.15, name: "$(arg robot_name)/B_site"}]</rosparam>
   
   <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="$(arg node_namespace)" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
     <!-- Remap topics from those used in code to those on the ROS network -->

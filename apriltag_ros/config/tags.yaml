@@ -19,7 +19,11 @@
 #   ]
 standalone_tags:
   [
-      {id: 46, size: 0.165, name: "s_front"},
+      {id: 46, size: 0.15, name: "shelf_one"},
+      {id: 51, size: 0.15, name: "shelf_two"},
+      {id: 80, size: 0.15, name: "home"},
+      {id: 215, size: 0.15, name: "A_site"},
+      {id: 241, size: 0.15, name: "B_site"},
   ]
 # ## Tag bundle definitions
 # ### Remarks
