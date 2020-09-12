@@ -3,8 +3,13 @@
   <arg name="launch_prefix" default="" /> <!-- set to value="gdbserver localhost:10000" for remote debugging -->
   <arg name="node_namespace" default="apriltag_ros_continuous_node" />
   <arg name="camera_name" default="/$(arg robot_name)/zed2/zed_node/left" />
-  <arg name="camera_frame" default="$(arg robot_name)/zed2_left_camera_optical_frame" />
+  <!--arg name="camera_frame" default="$(arg robot_name)/zed2_left_camera_optical_frame" /-->
+  <arg name="camera_frame" default="$(arg robot_name)/apriltag" />
   <arg name="image_topic" default="image_rect_gray" />
+  
+
+  <node pkg="tf" type="static_transform_publisher" name="april_sanity_tf" args="0 0 0 -0.5 0.5 -0.5 0.5 $(arg robot_name)/zed2_left_camera_frame $(arg robot_name)/apriltag 100"/>
+
   <!-- Set parameters -->
   <rosparam command="load" file="$(find apriltag_ros)/config/settings.yaml" ns="$(arg node_namespace)" />
   <rosparam command="load" file="$(find apriltag_ros)/config/tags.yaml" ns="$(arg node_namespace)" />
